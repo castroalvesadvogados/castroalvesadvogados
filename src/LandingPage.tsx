@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Scale, Shield, Briefcase, Users, ChevronRight, Menu, X } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, Facebook, Scale, Shield, Briefcase, Users, ChevronRight, Menu, X, Globe, CreditCard, Database, ArrowLeftRight, Cpu, Gavel, LifeBuoy, Lock, TrendingUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { cn } from "./lib/utils";
+import rafaelImg from "./assets/Rafael.png";
+import danielImg from "./assets/Daniel.png";
 
 // --- Schemas ---
 const contactSchema = z.object({
@@ -50,7 +52,7 @@ const Navbar = () => {
             CASTRO ALVES
           </span>
           <span className="text-[10px] uppercase tracking-[0.3em] text-gold-champagne font-medium">
-            Advogados Associados
+            Advogados
           </span>
         </div>
 
@@ -69,7 +71,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="#contact" className="btn-primary py-2 px-6">
-            Agendar Consulta
+            Contato
           </a>
         </div>
 
@@ -107,7 +109,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-navy-900">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-900 pt-40 pb-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -125,8 +127,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-gold-champagne uppercase tracking-[0.4em] text-xs font-semibold mb-6 block">
-            Dedicados exclusivamente ao Sistema Financeiro
+          <span className="text-gold-champagne uppercase tracking-[0.4em] text-xs font-semibold mb-10 block">
+            Dedicados exclusivamente ao Mercado Financeiro
           </span>
           <h1 className="text-4xl md:text-7xl text-white mb-8 leading-[1.1]">
             Especialistas em <br /> 
@@ -135,13 +137,18 @@ const Hero = () => {
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
             Suporte estratégico para instituições no Brasil e no exterior, com foco nas complexidades regulatórias dos sistemas financeiro e de pagamentos.
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <a href="#contact" className="btn-primary bg-gold-champagne text-navy-900 hover:bg-white hover:text-navy-900 w-full md:w-auto">
-              Agendar Consultoria
+              Contato
             </a>
-            <a href="#areas" className="text-white uppercase tracking-widest text-xs font-medium flex items-center group">
-              Áreas de Atuação <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href="#areas" className="text-white uppercase tracking-widest text-xs font-medium flex items-center group">
+                Áreas de Atuação <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href="#team" className="text-white uppercase tracking-widest text-xs font-medium flex items-center group">
+                Equipe <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -176,9 +183,9 @@ const PracticeAreas = () => {
       icon: <Shield className="w-8 h-8" />,
     },
     {
-      title: "Sistemas de Pagamento",
+      title: "Arranjos de Pagamento",
       description: "Consultoria em arranjos de pagamento, Pix e Open Finance, garantindo a conformidade com o SPB.",
-      icon: <Scale className="w-8 h-8" />,
+      icon: <CreditCard className="w-8 h-8" />,
     },
     {
       title: "Cooperativas de Crédito",
@@ -188,47 +195,47 @@ const PracticeAreas = () => {
     {
       title: "Infraestrutura do Mercado Financeiro",
       description: "Suporte jurídico para entidades de liquidação e registro, assegurando aderência aos padrões do BCB e CVM.",
-      icon: <Briefcase className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8" />,
     },
     {
       title: "M&A no Sistema Financeiro",
       description: "Estruturação de fusões e aquisições envolvendo instituições financeiras e transferência de controle.",
-      icon: <Users className="w-8 h-8" />,
+      icon: <ArrowLeftRight className="w-8 h-8" />,
     },
     {
       title: "Concorrência no Sistema Financeiro",
       description: "Análise estratégica de impactos concorrenciais e defesa em processos de concentração de mercado.",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Scale className="w-8 h-8" />,
     },
     {
       title: "Ativos Virtuais e Tokenização",
       description: "Acompanhamento regulatório e estruturação jurídica para o mercado de ativos virtuais e novos produtos financeiros.",
-      icon: <Briefcase className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8" />,
     },
     {
       title: "Câmbio e Capitais Internacionais",
       description: "Estruturação de operações cambiais, registro de capitais estrangeiros no país e capitais brasileiros no exterior.",
-      icon: <Scale className="w-8 h-8" />,
+      icon: <Globe className="w-8 h-8" />,
     },
     {
       title: "Processos Sancionadores",
       description: "Defesa em processos administrativos sancionadores, incluindo a negociação de Termos de Compromisso.",
-      icon: <Users className="w-8 h-8" />,
+      icon: <Gavel className="w-8 h-8" />,
     },
     {
       title: "Regimes de Resolução",
       description: "Suporte jurídico em regimes de RAET, intervenção e liquidação extrajudicial de instituições financeiras.",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <LifeBuoy className="w-8 h-8" />,
     },
     {
       title: "Tratamento de Dados",
       description: "Assessoramento no tratamento adequado de informações segundo a LGPD e a Lei de Sigilo Bancário.",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Lock className="w-8 h-8" />,
     },
     {
       title: "Operações no Mercado",
       description: "Assessoria em cessão de recebíveis, captação de recursos, crédito imobiliário, rural e do Proagro.",
-      icon: <Briefcase className="w-8 h-8" />,
+      icon: <TrendingUp className="w-8 h-8" />,
     },
   ];
 
@@ -239,7 +246,7 @@ const PracticeAreas = () => {
           <div className="max-w-2xl">
             <span className="text-gold-champagne uppercase tracking-widest text-xs font-bold mb-4 block">Especialidades</span>
             <h2 className="text-4xl md:text-5xl text-navy-900 leading-tight">
-              Dedicados exclusivamente às complexidades regulatórias.
+              Dedicados exclusivamente às complexidades do mercado financeiro.
             </h2>
           </div>
           <p className="text-lead/60 max-w-sm mt-6 md:mt-0">
@@ -281,7 +288,7 @@ const About = () => {
         >
           <span className="text-gold-champagne uppercase tracking-widest text-xs font-bold mb-4 block">Sobre o Escritório</span>
           <h2 className="text-4xl md:text-5xl text-navy-900 mb-8 leading-tight">
-            Uma Trajetória Pautada pela Ética e Resultados.
+            Uma Trajetória Pautada pela Ética e por Resultados.
           </h2>
           <div className="space-y-6 text-lead/80 font-light leading-relaxed">
             <p>
@@ -301,7 +308,7 @@ const Team = () => {
   const members = [
     {
       name: "Rafael Alves",
-      image: "input_file_0.png",
+      image: rafaelImg,
       linkedin: "https://www.linkedin.com/in/rafael-de-castro-alves-27aa98183",
       email: "rafael@castroalvesadvogados.com",
       bio: [
@@ -313,7 +320,7 @@ const Team = () => {
     },
     {
       name: "Daniel Castro",
-      image: "input_file_1.png",
+      image: danielImg,
       linkedin: "https://www.linkedin.com/in/daniel-castro-8449093/",
       email: "daniel.castro@castroalvesadvogados.com",
       bio: [
@@ -403,7 +410,7 @@ const Contact = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest mb-4">Escritórios</h4>
+                  <h4 className="text-sm font-bold uppercase tracking-widest mb-4">Endereços</h4>
                   <div className="space-y-6">
                     <div>
                       <span className="text-gold-champagne text-[10px] uppercase tracking-widest font-bold block mb-1">São Paulo</span>
@@ -416,19 +423,11 @@ const Contact = () => {
                       <span className="text-gold-champagne text-[10px] uppercase tracking-widest font-bold block mb-1">Brasília</span>
                       <p className="text-white/60 font-light text-sm leading-relaxed">
                         Centro Empresarial Varig - SCN Quadra 04<br />
-                        Bloco B, Asa Norte — Brasília/DF
+                        Bloco B, Asa Norte<br />
+                        Brasília/DF
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-gold-champagne shrink-0">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest mb-4">Telefone</h4>
-                  <p className="text-white/60 font-light text-sm">+55 (11) 3456-7890</p>
                 </div>
               </div>
               <div className="flex items-start space-x-6">
@@ -437,7 +436,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-widest mb-4">E-mail</h4>
-                  <p className="text-white/60 font-light text-sm">contato@castroalves.adv.br</p>
+                  <p className="text-white/60 font-light text-sm">contato@castroalvesadvogados.com</p>
                 </div>
               </div>
             </div>
@@ -505,7 +504,7 @@ const Footer = () => {
               CASTRO ALVES
             </span>
             <span className="text-[10px] uppercase tracking-[0.3em] text-gold-champagne font-medium">
-              Advogados Associados
+              Advogados
             </span>
           </div>
           <p className="text-white/40 text-sm font-light max-w-sm leading-relaxed">
@@ -548,7 +547,7 @@ export default function LandingPage() {
 
       {/* Floating Email Button */}
       <a 
-        href="mailto:contato@castroalves.adv.br"
+        href="mailto:contato@castroalvesadvogados.com"
         className="fixed bottom-8 right-8 w-16 h-16 bg-gold-champagne text-navy-900 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40"
       >
         <Mail size={24} />
