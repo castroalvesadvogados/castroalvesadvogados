@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Início", href: "#home" },
-    { name: "Áreas de Atuação", href: "#areas" },
+    { name: "Especialidades", href: "#areas" },
     { name: "O Escritório", href: "#about" },
     { name: "Equipe", href: "#team" },
     { name: "Contato", href: "#contact" },
@@ -140,7 +140,7 @@ const Hero = () => {
             </a>
             <div className="flex flex-wrap justify-center gap-6">
               <a href="#areas" className="text-white uppercase tracking-widest text-xs font-medium flex items-center group">
-                Áreas de Atuação <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                Especialidades <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#team" className="text-white uppercase tracking-widest text-xs font-medium flex items-center group">
                 Equipe <ChevronRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -513,7 +513,7 @@ const Footer = () => {
           <h4 className="text-xs font-bold uppercase tracking-widest mb-8">Links Rápidos</h4>
           <ul className="space-y-4 text-sm text-white/60 font-light">
             <li><a href="#home" className="hover:text-gold-champagne transition-colors">Início</a></li>
-            <li><a href="#areas" className="hover:text-gold-champagne transition-colors">Áreas de Atuação</a></li>
+            <li><a href="#areas" className="hover:text-gold-champagne transition-colors">Especialidades</a></li>
             <li><a href="#about" className="hover:text-gold-champagne transition-colors">O Escritório</a></li>
             <li><a href="#team" className="hover:text-gold-champagne transition-colors">Equipe</a></li>
           </ul>
