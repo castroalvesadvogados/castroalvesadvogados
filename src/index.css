@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-navy-900: #0A192F;
+  --color-navy-800: #112240;
+  --color-gold-champagne: #D4AF37;
+  --color-gold-light: #F4E4BC;
+  --color-lead: #2D3436;
+  --color-off-white: #F8F9FA;
+}
+
+@layer base {
+  body {
+    @apply bg-off-white text-lead font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border-b border-white/20;
+}
+
+.text-gold {
+  @apply text-gold-champagne;
+}
+
+.bg-navy {
+  @apply bg-navy-900;
+}
+
+.btn-primary {
+  @apply bg-navy-900 text-white px-8 py-3 rounded-none transition-all duration-300 hover:bg-gold-champagne hover:text-navy-900 font-medium uppercase tracking-widest text-xs;
+}
+
+.btn-outline {
+  @apply border border-navy-900 text-navy-900 px-8 py-3 rounded-none transition-all duration-300 hover:bg-navy-900 hover:text-white font-medium uppercase tracking-widest text-xs;
+}
