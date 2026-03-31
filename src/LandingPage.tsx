@@ -127,9 +127,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-gold-champagne uppercase tracking-[0.4em] text-xs font-semibold mb-10 block">
-            Dedicados exclusivamente ao Mercado Financeiro
-          </span>
           <h1 className="text-4xl md:text-7xl text-white mb-8 leading-[1.1]">
             Especialistas em <br /> 
             <span className="italic font-light">Sistema Financeiro</span>
