@@ -18,12 +18,13 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Clean
+        run: rm -rf dist
 
       - name: Build
         run: npm run build
-        env:
-          VITE_BASE: /castroalvesadvogados/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
