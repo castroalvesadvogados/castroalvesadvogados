@@ -304,23 +304,23 @@ const About = () => {
 const Team = () => {
   const members = [
     {
-      name: "Rafael Alves | Advogado",
+      name: "Rafael Alves",
       image: rafaelImg,
       linkedin: "https://www.linkedin.com/in/rafael-de-castro-alves-27aa98183",
       email: "rafael@castroalvesadvogados.com",
       bio: [
-        "Foi Procurador do Banco Central entre 2014 e 2023, onde atuou na consultoria de supervisão do sistema financeiro, em especial em autorizações para funcionamento de entidades supervisionadas e em processos administrativos sancionadores.",
+        "Sócio. Foi Procurador do Banco Central entre 2014 e 2023, onde atuou na consultoria de supervisão do sistema financeiro, em especial em autorizações para funcionamento de entidades supervisionadas e em processos administrativos sancionadores.",
         "Atuou também na área de processos judiciais relevantes e foi também responsável pela análise jurídica de propostas de normas do Banco Central e do Conselho Monetário Nacional.",
         "Mestre em Direito e Finanças pela Johann Wolfgang Goethe-Universität Frankfurt am Main.",
       ]
     },
     {
-      name: "Daniel Castro | Consultor",
+      name: "Daniel Castro",
       image: danielImg,
       linkedin: "https://www.linkedin.com/in/daniel-castro-8449093/",
       email: "daniel.castro@castroalvesadvogados.com",
       bio: [
-        "24 anos de experiência no Banco Central (2002-2025), sendo mais de 14 anos no sistema de pagamentos. Ex-chefe da divisão responsável pela regulação de infraestruturas do mercado financeiro.",
+        "Consultor. 24 anos de experiência no Banco Central (2002-2025), sendo mais de 14 anos no sistema de pagamentos. Ex-chefe da divisão responsável pela regulação de infraestruturas do mercado financeiro.",
         "Atuou em projetos inovadores como o Pix, tokenização de ativos e o estabelecimento do ecossistema brasileiro para registro de arranjos de pagamento e duplicatas escriturais.",
         "Ex-consultor do Bank for International Settlements (BIS), onde atuou no BIS Innovation Hub, desenvolvendo projetos relacionados a pagamentos instantâneos e à aplicação de IA na supervisão bancária.",
         "Doutor em Finanças pela Universidade de Brasília (UnB), mestre e MBA em Finanças, além de graduações em Ciência da Computação e Administração."
