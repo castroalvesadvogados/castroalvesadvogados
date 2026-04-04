@@ -304,7 +304,7 @@ const About = () => {
 const Team = () => {
   const members = [
     {
-      name: "Rafael Alves",
+      name: "Rafael Alves | Advogado",
       image: rafaelImg,
       linkedin: "https://www.linkedin.com/in/rafael-de-castro-alves-27aa98183",
       email: "rafael@castroalvesadvogados.com",
@@ -312,11 +312,10 @@ const Team = () => {
         "Foi Procurador do Banco Central entre 2014 e 2023, onde atuou na consultoria de supervisão do sistema financeiro, em especial em autorizações para funcionamento de entidades supervisionadas e em processos administrativos sancionadores.",
         "Atuou também na área de processos judiciais relevantes e foi também responsável pela análise jurídica de propostas de normas do Banco Central e do Conselho Monetário Nacional.",
         "Mestre em Direito e Finanças pela Johann Wolfgang Goethe-Universität Frankfurt am Main.",
-        "Consultor da Revista da Procuradoria-Geral do Banco Central e Consultor Legislativo do Senado Federal nas áreas de Direito Econômico e Regulação, Direito Empresarial e Direito do Consumidor."
       ]
     },
     {
-      name: "Daniel Castro",
+      name: "Daniel Castro | Consultor",
       image: danielImg,
       linkedin: "https://www.linkedin.com/in/daniel-castro-8449093/",
       email: "daniel.castro@castroalvesadvogados.com",
@@ -353,6 +352,7 @@ const Team = () => {
                   src={member.image} 
                   alt={member.name} 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
